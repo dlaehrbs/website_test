@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nanum Gothic',400;
+    
     }
     
     .hidden{
@@ -20,13 +24,14 @@
     }
 
     img{
-        width: 500px;
+        width: 400px;
+        margin: 40px;
     }
     
     .login {
         position: relative;
         z-index: 2;
-        margin: 100px;
+        margin: 0px;
     }
     
     .login h1 {
