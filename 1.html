@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>예매</title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <section class="login">
+
+        <form class="hidden" id="login-form" >  <!----숨기기-->
+
+            <h1>밴드 심금</h1>
+
+            <div class="int-area">
+                <input
+                    type="text"
+                    id="name"
+                    autocomplete="off"
+                    required
+                />
+                <label for="name">이름</label>
+            </div>
+
+            <div class="int-area">
+                <input
+                    type="text"
+                    id="student_number"
+                    autocomplete="off"
+                    required
+                />
+                <label for="student_number">학번</label>
+            </div>
+
+            <div class="int-area">
+                <input
+                    type="text"
+                    id="seat_number"
+                    autocomplete="off"
+                    required 2
+                />
+                <label for="seat_number">자리번호</label>
+            </div>
+
+            <div class="btn-area">
+                <button id="btn" type="submit">예약</button>
+            </div>
+        </form>
+
+    </section>
+
+      <!----------숨길꺼-------->
+        <div class="hidden" id="infor">
+            <h2 id="greeting1"></h2> <!-----이름-->
+            <h2 id="greeting2"></h2> <!-----학번-->
+            <h2 id="greeting3"></h2>  <!-----자리번호-->
+            <input type="button" class="hidden" id="remove_storage" value="정보 제거">
+        
+        </div>
+
+
+
+</body>
+</html>

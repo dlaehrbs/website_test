@@ -1,19 +1,34 @@
+///로그인 정보 저장 변수
 const loginForm = document.querySelector("#login-form");
+
 const loginInput1 = document.querySelector("#name");
 const loginInput2 = document.querySelector("#student_number");
+const loginInput3 = document.querySelector("#seat_number");
+
+////텍스트 출력하는 변수
 const greeting1 = document.querySelector("#greeting1");
 const greeting2 = document.querySelector("#greeting2");
+const greeting3 = document.querySelector("#greeting3");
 
+const information = document.querySelector("#infor")
+
+////저장된 정보 호출 변수
 const savedUsername = localStorage.getItem("username")
 const savedStudent_number = localStorage.getItem("student_number")
+const savedSeat_number = localStorage.getItem("seat_number")
 
 ///1번쨰
 if (savedUsername === null){ ////저장된 정보가 없으면
-  loginForm.classList.remove("hidden"); ///hidden 클래스를 제거
-  loginForm.addEventListener("submit", onLoginSubmit); ///submit 이벤트가 발생하면 on함수 실행
+    information.classList.add("hidden")
+    loginForm.classList.remove("hidden"); ///hidden 클래스를 제거
+    loginForm.addEventListener("submit", onLoginSubmit); ///submit 이벤트가 발생하면 on함수 실행
+    
 } else {
   paintGreetings1(savedUsername)
   paintGreetings2(savedStudent_number) ///아니면 저장된 이름으로 pain~~함수 실행
+  paintGreetings3(savedSeat_number)
+  removeBtn.classList.remove("hidden")
+  information.classList.remove("hidden")
 }
 
 ////2번쨰
@@ -23,23 +38,35 @@ function onLoginSubmit(event) {
 
   const username = loginInput1.value;  ///이름
   const student_number = loginInput2.value;  ///학번
+  const seat_number = loginInput3.value; ///자리번호
 
   localStorage.setItem("username", username);  ///이름저장
   localStorage.setItem("student_number",student_number) ///학번저장
+  localStorage.setItem("seat_number",seat_number) ///자리번호 저장
+
   paintGreetings1(username); ///이름 출력
   paintGreetings2(student_number); ///학번출력
-  removeBtn.classList.remove("hidden")
+  paintGreetings3(seat_number); //자리번호 출력
+
+  removeBtn.classList.remove("hidden") ///뒤로가기 버튼 보이게 하기
+  information.classList.remove("hidden") ///학번 이름 자리번호 보이게하기
 }
 
 /// 이름 학번 출력하는 함수
+
 function paintGreetings1(username){
-  greeting1.innerText = `반갑습니다 ${username}님`;
+  greeting1.innerText = `이름 : ${username}`;
   greeting1.classList.remove("hidden");
 }
 
 function paintGreetings2(student_number){
-  greeting2.innerText = `학번은 ${student_number}입니다`;
+  greeting2.innerText = `학번 : ${student_number}`;
   greeting2.classList.remove("hidden");
+}
+
+function paintGreetings3(seat_number){
+  greeting3.innerText = `자리번호 : ${seat_number}`;
+  greeting3.classList.remove("hidden");
 }
 
 
@@ -49,6 +76,8 @@ const removeBtn = document.querySelector("#remove_storage");
 function removeStorage() {
 localStorage.removeItem("username");
 localStorage.removeItem("student_number");
+localStorage.removeItem("seat_number");
+
 removeBtn.classList.add("hidden")
 window.location.reload();
 
