@@ -24,7 +24,7 @@
     }
 
     img{
-        width: 400px;
+        width: 300px;
         margin: 40px;
     }
     
@@ -42,7 +42,7 @@
     }
     
     .int-area {
-        width: 400px;
+        width: 300px;
         position: relative;
         margin-top: 20px;
     }
@@ -58,7 +58,7 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid #999;
-        font-size: 17px;
+        font-size: 15px;
         color: #fff;
         outline: none;
     }
@@ -117,40 +117,41 @@
     #infor{
       display: block;
       color: #ffffff;
-      text-align: center;
-    
+      text-align: left;
+      font-size: 20px;
     }
     
     #greeting1{
-        font-size: 40px;
-        margin: 10px 0;
+       
+        margin: 10% 0;
     
     }
     #greeting2{
-        font-size: 40px;
-        margin: 30% 0;
+      
+        margin: 10% 0;
     
     }
     #greeting3{
-        font-size: 40px;
-        margin: 30% 0;
+        
+        margin: 10% 0;
     
     }
 
-    #infor input{
-        color: #000000;
+    #greeting4{
+        margin: 50px 0;
     }
-    
     
     #remove_storage{
         background-color: #ffffff;
-        border: 1px solid;
+        color: #000000;
+        border: none;
         border-radius: 50px;
         border-color: rgb(152, 152, 152);
         width: 250px;
         height: 30px;
         font-size: 14px;
         text-align: center;
+        margin: 50px 0;
     
     }
     

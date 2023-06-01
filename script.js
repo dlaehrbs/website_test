@@ -9,6 +9,7 @@ const loginInput3 = document.querySelector("#seat_number");
 const greeting1 = document.querySelector("#greeting1");
 const greeting2 = document.querySelector("#greeting2");
 const greeting3 = document.querySelector("#greeting3");
+const greeting4 = document.querySelector("#greeting4");
 
 const information = document.querySelector("#infor")
 
@@ -29,6 +30,7 @@ if (savedUsername === null){ ////저장된 정보가 없으면
   paintGreetings3(savedSeat_number)
   removeBtn.classList.remove("hidden")
   information.classList.remove("hidden")
+  greeting4.innerText = "반드시 캡쳐해주세요"
 }
 
 ////2번쨰
@@ -50,6 +52,7 @@ function onLoginSubmit(event) {
 
   removeBtn.classList.remove("hidden") ///뒤로가기 버튼 보이게 하기
   information.classList.remove("hidden") ///학번 이름 자리번호 보이게하기
+  greeting4.innerText = "반드시 캡쳐해주세요"
 }
 
 /// 이름 학번 출력하는 함수
