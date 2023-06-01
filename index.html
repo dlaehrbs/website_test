@@ -22,12 +22,9 @@
             background: linear-gradient(to left, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             text-align: center;
         }
-        #poster{
-            text-align: center;
-            
-        }
+      
         img{
-            width: 400px;
+            width: 450px;
             box-shadow: 10px 10px 100px 10px rgba(0,0,0,0.84);
         }
         input{
@@ -43,6 +40,36 @@
             margin: 60px;
             
         }
+
+        @media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #134E5E;
+  }
+
+  #poster {
+    width: 100%;
+    margin: 0;
+    background-color: #71B280;
+  }
+
+  #poster input {
+    width: 200px;
+    height: 25px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  input {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
     </style>
 
 
