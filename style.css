@@ -18,10 +18,15 @@
         background: -webkit-linear-gradient(to left, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to left, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
+
+    img{
+        width: 500px;
+    }
     
     .login {
         position: relative;
         z-index: 2;
+        margin: 100px;
     }
     
     .login h1 {
@@ -48,7 +53,7 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid #999;
-        font-size: 18px;
+        font-size: 17px;
         color: #fff;
         outline: none;
     }
@@ -57,8 +62,8 @@
         position: absolute;
         left: 10px;
         top: 15px;
-        font-size: 18px;
-        color: #999;
+        font-size: 17px;
+        color: #bcbcbc;
         transition: top 0.5s ease;
     }
     
@@ -125,6 +130,10 @@
         font-size: 40px;
         margin: 30% 0;
     
+    }
+
+    #infor input{
+        color: #000000;
     }
     
     
