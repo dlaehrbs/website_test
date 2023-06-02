@@ -1,5 +1,5 @@
 ///로그인 정보 저장 변수
-const loginForm = document.querySelector("#login-form");
+const loginForm = document.querySelector("#login");
 
 const loginInput1 = document.querySelector("#name");
 const loginInput2 = document.querySelector("#student_number");

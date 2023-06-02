@@ -10,63 +10,67 @@
 </head>
 <body>
 
-    <div>
-        <img src="p.jpeg" alt="">
-
-    </div>
-
-    <section class="login">
-
-        <form class="hidden" id="login-form" >  <!----숨기기-->
-
-            <h1>~~~~~</h1>
-
-            <div class="int-area">
-                <input
-                    type="text"
-                    id="name"
-                    autocomplete="off"
-                    required
-                />
-                <label for="name">이름</label>
-            </div>
-
-            <div class="int-area">
-                <input
-                    type="text"
-                    id="student_number"
-                    autocomplete="off"
-                    required
-                />
-                <label for="student_number">학번</label>
-            </div>
-
-            <div class="int-area">
-                <input
-                    type="text"
-                    id="seat_number"
-                    autocomplete="off"
-                    required 2
-                />
-                <label for="seat_number">자리번호</label>
-            </div>
-
-            <div class="btn-area">
-                <button id="btn" type="submit">예약</button>
-            </div>
-        </form>
-
-    </section>
-
-      <!----------숨길꺼-------->
-        <div class="hidden" id="infor">
-            <h2 id="greeting1"></h2> <!-----이름-->
-            <h2 id="greeting2"></h2> <!-----학번-->
-            <h2 id="greeting3"></h2>  <!-----자리번호-->
-            <h2 id="greeting4"></h2>
-            <input type="button" class="hidden" id="remove_storage" name="button" value="다시 예약하러가기">
+    <div class="information0">
         
-        </div>
+        
+            <img src="p.jpeg" alt="">
+
+    
+
+        <section class="hidden" id="login">   <!----숨기기-->
+
+            <form  id="login-form" > 
+                
+                <div class="int-area">
+                    <input
+                        type="text"
+                        id="name"
+                        autocomplete="off"
+                        required
+                        maxlength='3'
+                    />
+                    <label for="name">이름</label>
+                </div>
+
+                <div class="int-area">
+                    <input
+                        type="text"
+                        id="student_number"
+                        autocomplete="off"
+                        required
+                        maxlength='5'
+                    />
+                    <label for="student_number">학번</label>
+                </div>
+
+                <div class="int-area">
+                    <input
+                        type="number"
+                        id="seat_number"
+                        autocomplete="off"
+                        required 
+                        maxlength="2"
+                    />
+                    <label for="seat_number">자리번호</label>
+                </div>
+
+                <div class="btn-area">
+                    <button id="btn" type="submit">예약</button>
+                </div>
+            </form>
+
+        </section>
+
+        <!----------숨길꺼-------->
+            <section class="hidden" id="infor">
+                <h2 id="greeting1"></h2> <!-----이름-->
+                <h2 id="greeting2"></h2> <!-----학번-->
+                <h2 id="greeting3"></h2>  <!-----자리번호-->
+                <h2 id="greeting4"></h2>
+                <input type="button" class="hidden" id="remove_storage" name="button" value="다시 예약하러가기">
+            
+            </section>
+    </div>
 
 
         <script src="script.js"></script>
