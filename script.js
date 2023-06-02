@@ -5,7 +5,7 @@ const loginInput1 = document.querySelector("#name");
 const loginInput2 = document.querySelector("#student_number");
 const loginInput3 = document.querySelector("#seat_number");
 
-////텍스트 출력하는 변수
+////텍스트 출력 변수
 const greeting1 = document.querySelector("#greeting1");
 const greeting2 = document.querySelector("#greeting2");
 const greeting3 = document.querySelector("#greeting3");
@@ -17,6 +17,11 @@ const information = document.querySelector("#infor")
 const savedUsername = localStorage.getItem("username")
 const savedStudent_number = localStorage.getItem("student_number")
 const savedSeat_number = localStorage.getItem("seat_number")
+const removeBtn = document.querySelector("#remove_storage");
+
+
+
+
 
 ///1번쨰
 if (savedUsername === null){ ////저장된 정보가 없으면
@@ -32,6 +37,9 @@ if (savedUsername === null){ ////저장된 정보가 없으면
   information.classList.remove("hidden")
   greeting4.innerText = "반드시 캡쳐해주세요"
 }
+
+
+
 
 ////2번쨰
 function onLoginSubmit(event) {
@@ -55,7 +63,11 @@ function onLoginSubmit(event) {
   greeting4.innerText = "반드시 캡쳐해주세요"
 }
 
-/// 이름 학번 출력하는 함수
+
+
+
+
+/// 이름 학번 자리번호 출력하는 함수
 
 function paintGreetings1(username){
   greeting1.innerText = `이름 : ${username}`;
@@ -73,8 +85,9 @@ function paintGreetings3(seat_number){
 }
 
 
-///정보 제거 하는 함수
-const removeBtn = document.querySelector("#remove_storage");
+
+
+///정보 제거하는 함수
 
 function removeStorage() {
 localStorage.removeItem("username");
