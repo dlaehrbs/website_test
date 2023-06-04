@@ -1,65 +1,127 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>심금</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
-    <title>예매</title>
 </head>
+
 <body>
 
-    <div class="information0">
-        
-        
-            <img src="p.jpeg" alt="">
 
     
 
-        <section class="hidden" id="login">   <!----숨기기-->
+    <div id="container">
 
-            <form  id="login-form" > 
-                
-                <div class="int-area">
-                    <input
-                        type="text"
-                        id="name"
-                        autocomplete="off"
-                        required
-                        maxlength='3'
-                    />
-                    <label for="name">이름</label>
-                </div>
+        <div class="seatContainer">
+            <div class="row">
+                <span  id="A1" class="seat">A1</span>
+                <span id="A2" class="seat">A2</span>
+                <span id="A3" class="seat">A3</span>
+                <span id="A4" class="seat">A4</span>
+                <span id="A5" class="seat">A5</span>
+                <span id="A6" class="seat">A6</span>
+                <span id="A7" class="seat">A7</span>
+                <span id="A8" class="seat">A8</span>
+                <span id="A9" class="seat">A9</span>
+                <span id="A10" class="seat">A10</span>
+            </div>
 
-                <div class="int-area">
-                    <input
-                        type="text"
-                        id="student_number"
-                        autocomplete="off"
-                        required
-                        maxlength='5'
-                    />
-                    <label for="student_number">학번</label>
-                </div>
+            <div class="row">
+                <span id="B1" class="seat">B1</span>
+                <span id="B2" class="seat">B2</span>
+                <span id="B3" class="seat">B3</span>
+                <span id="B4" class="seat">B4</span>
+                <span id="B5"class="seat">B5</span>
+                <span id="B6" class="seat">B6</span>
+                <span id="B7" class="seat">B7</span>
+                <span id="B8" class="seat">B8</span>
+                <span id="B9" class="seat">B9</span>
+                <span id="B10" class="seat">B10</span>
+            </div>
 
-                <div class="int-area">
-                    <input
-                        type="number"
-                        id="seat_number"
-                        autocomplete="off"
-                        required 
-                        maxlength="2"
-                    />
-                    <label for="seat_number">자리번호</label>
-                </div>
+            <div class="row">
+                <span id="C1" class="seat">C1</span>
+                <span id="C2" class="seat">C2</span>
+                <span id="C3" class="seat">C3</span>
+                <span id="C4" class="seat">C4</span>
+                <span id="C5" class="seat">C5</span>
+                <span id="C6" class="seat">C6</span>
+                <span id="C7" class="seat">C7</span>
+                <span id="C8" class="seat">C8</span>
+                <span id="C9" class="seat">C9</span>
+                <span id="C10" class="seat">C10</span>
+            </div>
 
-                <div class="btn-area">
-                    <button id="btn" type="submit">예약</button>
-                </div>
-            </form>
+            <div class="seat0">
+            </div>
 
-        </section>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="information0">
+        
+
+            <section  id="login">   <!----숨기기-->
+
+                <form  id="login-form" > 
+                    
+                    <div class="int-area">
+                        <input
+                            type="text"
+                            id="name"
+                            autocomplete="off"
+                            required
+                            maxlength='3'
+                        />
+                        <label for="name">이름</label>
+                    </div>
+
+                    <div class="int-area">
+                        <input
+                            type="text"
+                            id="student_number"
+                            autocomplete="off"
+                            required
+                            maxlength='5'
+                        />
+                        <label for="student_number">학번</label>
+                    </div>
+
+                    <div class="int-area">
+                        <input
+                            type="text"
+                            id="seat_number"
+                            autocomplete="off"
+                            required 
+                            maxlength="3"
+                            
+                        />
+                        <label for="seat_number">자리번호</label>
+                    </div>
+
+                    <div class="btn-area">
+                        <button id="btn" type="submit">예약</button>
+                    </div>
+                </form>
+
+            </section>
 
         <!----------숨길꺼-------->
             <section class="hidden" id="infor">
@@ -70,10 +132,12 @@
                 <input type="button" class="hidden" id="remove_storage" name="button" value="다시 예약하러가기">
             
             </section>
+        </div>
     </div>
 
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
+
 
 </body>
 </html>

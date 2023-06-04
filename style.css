@@ -1,170 +1,231 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400');
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nanum Gothic',400;
-    
-    }
-    
-    .hidden{
-        display: none;
-    }
-    
-    body {
-        background-image: url('123.jpeg');
-    }
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Lato', sans-serif;
 
-    .information0{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+}
 
-    img{
-        width: 30%;
-        max-width: 700px;
-        margin-left: 20%;
-        margin-top: 4%;
-        box-shadow: -20px 20px 80px 10px rgba(0,0,0,0.84);
-    }
-    
-    #login {
-        margin-left:  10%;
-    }
-    
-    #login h1 {
-        font-size: 50px;
-        color: #fff;
-        text-align: center;
-        margin: 30px 0;
-    }
-    
-    .int-area {
-        width: 300px;
-        position: relative;
-        margin-top: 20px;
-    }
-    
-    .int-area:first-child {
-        margin-top: 0;
-    }
-    
-    .int-area input {
-        width: 100%;
-        padding: 20px 10px 10px;
-        /* 배경색이 없습니다.*/
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #999;
-        font-size: 15px;
-        color: #fff;
-        outline: none;
-    }
-    
-    .int-area label {
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        font-size: 17px;
-        color: #bcbcbc;
-        transition: top 0.5s ease;
-    }
-    
-    .int-area label.warning {
-        color: red !important;
-        animation: warning 0.3s ease;
-        animation-iteration-count: 3;
-    }
-    
-    @keyframes warning {
-        0% {
-            transform: translateX(-8px);
-        }
-        25% {
-            transform: translateX(8px);
-        }
-        50% {
-            transform: translateX(-8px);
-        }
-        100% {
-            transform: translateX(8px);
-        }
-    }
-    
-    .int-area input:focus + label,
-    .int-area input:valid + label {
-        top: 0;
-        font-size: 13px;
-        color: #0fc8c8;
-    }
-    
-    .btn-area {
-        margin-top: 50px;
-    }
-    
-    .btn-area button {
-        width: 100%;
-        height: 40px;
-        background-color: #787eeb;
-        color: #fff;
-        border: none;
-        font-size: 20px;
-        border-radius: 25px;
-    }
-    
-    #infor{
-      display: block;
-      color: #ffffff;
-      text-align: left;
-      font-size: 20px;
-      width: 50%;
-      margin: 0 10%;
-    }
+body {
+    background-image: url('123.jpeg');
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hidden{
+    display: none;
+}
 
 
-    
-    #greeting1{
-       
-        margin: 5% 0;
-    
-    }
-    #greeting2{
-      
-        margin: 5% 0;
-    
-    }
-    #greeting3{
-        
-        margin: 5% 0;
-    
-    }
 
-    #greeting4{
-        margin: 10% 0;
-    }
-    
-    #remove_storage{
-        background-color: #ffffff;
-        color: #000000;
-        border: none;
-        border-radius: 50px;
-        border-color: rgb(152, 152, 152);
-        width: 250px;
-        height: 30px;
-        font-size: 10%;
-        text-align: center;
-        margin: 20% 0;
-    
-    }
+/*       자리표시        */
 
-    button{
-        display: block;
+
+.seatContainer{
+    margin-right: 0px;
+    margin-left: 25%;
+}
+
+.row{
+    display: flex;
+}
+
+.seat{
+    background-color: #444451;
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #a4a4a49f;
+    width: 33px;
+    height: 50px;
+    margin: 3px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+}
+
+.seat0{
+    margin-top: 20px;
+    background-color:#2b2b33;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: rgb(219, 71, 71);
+}
+
+.seat:nth-of-type(5){
+    margin-right: 20px;
+}
+
+.selectedSeat{
+    background-color: #01eaff;
+    width: 33px;
+    height: 50px;
+    margin: 3px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.occupiedSeat{
+    background-color: #fff;
+    text-align: center;
+    width: 35px;
+    height: 40px;
+    margin: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.selectedSeat:nth-of-type(5){
+    margin-right: 20px;
+}
+
+
+
+/*       로그인 전 정보표시       */
+
+.information0{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+#login {
+    margin-left:  -20%;
+}
+
+
+.int-area {
+    width: 400px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.int-area:first-child {
+    margin-top: 0;
+}
+
+.int-area input {
+    width: 100%;
+    padding: 25px 10px 10px;
+    /* 배경색이 없습니다.*/
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+}
+
+.int-area label {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 20px;
+    color: #bcbcbc;
+    transition: top 0.5s ease;
+}
+
+.int-area label.warning {
+    color: red !important;
+    animation: warning 0.3s ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes warning {
+    0% {
+        transform: translateX(-8px);
     }
+    25% {
+        transform: translateX(8px);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(8px);
+    }
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: 0;
+    font-size: 17px;
+    color: #0fc8c8;
+}
+
+.btn-area {
+    margin-top: 50px;
+}
+
+.btn-area button {
+    width: 100%;
+    height: 40px;
+    background-color: #787eeb;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+
+
+/*      로그인 후 정보표시        */
+
+#infor{
     
+    color: #ffffff;
+    text-align: left;
+    font-size: 25px;
+    width: 50%;
+    margin: 0 0%;
+}
+#greeting1{
+    
+    margin: 5% 0;
+
+}
+#greeting2{
+    
+    margin: 5% 0;
+
+}
+#greeting3{
+    
+    margin: 5% 0;
+
+}
+
+#greeting4{
+    margin-top: 0 0;
+}
+
+#remove_storage{
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    border-color: rgb(152, 152, 152);
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    margin: 20% 0;
+
+}
+
+
+
 
 
 
@@ -178,121 +239,114 @@
 
         /* Mobile-friendly CSS */
 
-        @media only screen and (max-width: 768px) {
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            /* Header */
-            .information0 {
-              width: 100%;
-              height: 100%;
-              flex-direction: column;
-              align-content: center;
-             
+@media only screen and (max-width: 768px) {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+.information0 {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    
+    
 
-            }
+}
 
-            img{
-                width: 100%;
-                height: 40%;
-                margin: 0;
-                padding: 5%;
-                
-            }
+img{
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    padding: 5%;
+    
+}
 
-            #login{
-                width: 100%;
-                margin: 0px;
-                padding: 13%;
-                padding-top: 0;
-                
+#login{
+    width: 100%;
+    margin: 0px;
+    padding: 13%;
+    padding-top: 0;
+    
 
-            }
+}
 
+.int-area{
+    width: 100%;
+    position: relative;
+}
 
+.int-area input {
+    width: 100%;
+    padding: 10px 10px 0px;
+    /* 배경색이 없습니다.*/
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+}
 
+.int-area label {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 13px;
+    color: #ffffff;
+    transition: top 0.5s ease;
+}
 
-            .int-area{
-                width: 100%;
-                position: relative;
-            }
+    
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: -5px;
+    font-size: 12px;
+    color: #0fc8c8;
+}
 
-            .int-area input {
-                width: 100%;
-                padding: 10px 10px 0px;
-                /* 배경색이 없습니다.*/
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid #999;
-                font-size: 16px;
-                color: #fff;
-                outline: none;
-            }
+.btn-area{
+    margin: 15px 0;
+    width: 100%;
+    height: 100%;
+}
 
-            .int-area label {
-                position: absolute;
-                left: 10px;
-                top: 5px;
-                font-size: 13px;
-                color: #ffffff;
-                transition: top 0.5s ease;
-            }
-
-             
-            .int-area input:focus + label,
-            .int-area input:valid + label {
-                top: -5px;
-                font-size: 12px;
-                color: #0fc8c8;
-            }
-
-            .btn-area{
-                margin: 15px 0;
-                width: 100%;
-                height: 100%;
-            }
-            
-            .btn-area input{
-                width: 100%;
-                height: 10%;
-            }
+.btn-area input{
+    width: 100%;
+    height: 10%;
+}
 
 
+#infor{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    font-size: 10px;
+    padding: 0;
+    text-align:center
+}
 
+#infor h2{
+    margin: 10px;
+}
 
+#remove_storage{
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    border-color: rgb(152, 152, 152);
+    width: 60%;
+    height: 30px;
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
 
-
-
-            #infor{
-                display: block;
-                width: 100%;
-                margin-top: 0;
-                font-size: 10px;
-                padding: 0;
-                text-align:center
-            }
-
-            #infor h2{
-                margin: 10px;
-            }
-
-            #remove_storage{
-                background-color: #ffffff;
-                color: #000000;
-                border: none;
-                border-radius: 50px;
-                border-color: rgb(152, 152, 152);
-                width: 60%;
-                height: 30px;
-                font-size: 13px;
-                text-align: center;
-                margin: 0;
-            
-            }
+}
 
             
 
-        }
+}
           
+
