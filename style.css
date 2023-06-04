@@ -45,6 +45,11 @@ body {
     text-align: center;
     font-size: 30px;
     border-radius: 10px;
+    position: relative; 
+    left: 20%;
+}
+.text0{
+    position: relative; top: 18%;
 }
 
 .console{
@@ -56,6 +61,13 @@ body {
     border-color: #ffffff;
     background-color: #000000;
     margin-bottom: 10px;
+    position: relative; 
+    left: 40%;
+}
+.text1{
+    position: relative; 
+    top: 2px; 
+    left: 15px;
 }
 
 .row{
@@ -74,6 +86,10 @@ body {
     border-top-right-radius: 12px;
     text-align: center;
 }
+.seat:nth-of-type(5){
+    margin-right: 20px;
+}
+
 
 .back{
     display: flex;
@@ -93,6 +109,11 @@ body {
     border-color: rgb(255, 255, 255);
 }
 
+.text{
+    position: relative; 
+    top: 40%;
+}
+
 .seat1{
     background-color:#000000;
     width: 50%;
@@ -101,9 +122,6 @@ body {
     border-radius: 15px;
     border: 1px solid;
     border-color: rgb(255, 255, 255);
-}
-.seat:nth-of-type(5){
-    margin-right: 20px;
 }
 
 .selectedSeat{
@@ -232,11 +250,12 @@ body {
     border: 1px solid;
     border-radius: 25px;
     border-color: #0a381063;
-    padding: 100px;
+    padding: 20px;
     padding-bottom: 0;
+    padding-right: 0;
     color: #ffffff;
     text-align: left;
-    font-size: 25px;
+    font-size: 15px;
     width: 50%;
     margin-right: 40%;
 }
@@ -289,114 +308,305 @@ body {
 
         /* Mobile-friendly CSS */
 
-@media only screen and (max-width: 768px) {
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Header */
-.information0 {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
+@media only screen and (max-width: 820px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    body {
+        background-image: url('123.jpeg');
+    }
+    
+    .hidden{
+        display: none;
+    }
+    
+    #container{
+        
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+    .seatContainer{
+        text-align: center;
+        border: 1px solid;
+        border-color: #ffffff;
+        border-radius: 25px;
+        margin: 20px;
+        padding: 30px;
+    }
     
     
-
-}
-
-img{
-    width: 100%;
-    height: 40%;
-    margin: 0;
-    padding: 5%;
+    .stage{
+        width: 30%;
+        height: 40px;
+        border: none;
+        background-color: #d1d1d1;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 10px;
+      
+        position: relative; 
+        left: 35%;
+    }
+    .text0{
+        position: relative; top: 15%;
+    }
     
-}
-
-#login{
-    width: 100%;
-    margin: 0px;
-    padding: 13%;
-    padding-top: 0;
     
-
-}
-
-.int-area{
-    width: 100%;
-    position: relative;
-}
-
-.int-area input {
-    width: 100%;
-    padding: 10px 10px 0px;
-    /* 배경색이 없습니다.*/
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #999;
-    font-size: 16px;
-    color: #fff;
-    outline: none;
-}
-
-.int-area label {
-    position: absolute;
-    left: 10px;
-    top: 5px;
-    font-size: 13px;
-    color: #ffffff;
-    transition: top 0.5s ease;
-}
-
     
-.int-area input:focus + label,
-.int-area input:valid + label {
-    top: -5px;
-    font-size: 12px;
-    color: #0fc8c8;
+    .console{
+        width: 12%;
+        height: 20px;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: #ffffff;
+        background-color: #000000;
+        margin-bottom: 10px;
+        font-size: 10px;
+    
+        position: relative; 
+        left: 44%;
+    }
+    .text1{
+        position: relative; 
+        top: 1px; 
+        left: 0px;
+    }
+    
+    
+    
+    
+    .row{
+        display: flex;
+    }
+    
+    .seat{
+        background-color: #4444514f;
+        color: #ffffff;
+        border: 1px solid;
+        border-color: #a4a4a49f;
+        width: 25px;
+        height: 40px;
+        margin: 3px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        text-align: center;
+        font-size: 11px;
+    
+        position: relative; 
+        top: 0px; 
+        left: 0px;
+    }
+    .seat:nth-of-type(5){
+        margin-right: 20px;
+    }
+    
+    
+    .back{
+        display: flex;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 20px;
+        color: #c2c2c2;
+    }
+    
+    
+    .seat0{
+        background-color:#000000;
+        width: 50%;
+        height: 180px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: rgb(255, 255, 255);
+        font-size: 15px;
+    }
+    
+    .text{
+        position: relative; 
+        top: 40%;
+    }
+    
+    .seat1{
+        background-color:#000000;
+        width: 50%;
+        height: 180px;
+        margin-left: 5%;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: rgb(255, 255, 255);
+        font-size: 15px;
+    }
+    
+    
+    
+    
+    .selectedSeat{
+        background-color: #01eaff;
+        width: 25px;
+        height: 40px;
+        margin: 3px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        text-align: center;
+        font-size: 11px;
+    
+        position: relative; 
+        top: 0px; 
+        left: 0px;
+    }
+    .selectedSeat:nth-of-type(5){
+        margin-right: 20px;
+    }
+    
+    
+    
+    .occupiedSeat{
+        background-color: #fff;
+        text-align: center;
+        width: 35px;
+        height: 40px;
+        margin: 4px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*       로그인 전 정보표시       */
+    
+    .information0{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+    
+    #login {
+        border: 1px solid;
+        border-color: #ffffff;
+        border-radius: 25px;
+        padding: 20px;
+    }
+    
+    
+    
+    .int-area {
+        width: 250px;
+        position: relative;
+    }
+    .int-area:first-child {
+        margin-top: 0;
+    }
+    .int-area input {
+        width: 100%;
+        padding: 20px 10px 10px;
+        /* 배경색이 없습니다.*/
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #999;
+        font-size: 17px;
+        color: #fff;
+        outline: none;
+    }
+    .int-area label {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        font-size: 15px;
+        color: #bcbcbc;
+        transition: top 0.5s ease;
+    }
+    .int-area label.warning {
+        color: red !important;
+        animation: warning 0.3s ease;
+        animation-iteration-count: 3;
+    }
+    
+    @keyframes warning {
+        0% {
+            transform: translateX(-8px);
+        }
+        25% {
+            transform: translateX(8px);
+        }
+        50% {
+            transform: translateX(-8px);
+        }
+        100% {
+            transform: translateX(8px);
+        }
+    }
+    .int-area input:focus + label,
+    .int-area input:valid + label {
+        top: 0;
+        font-size: 13px;
+        color: #0fc8c8;
+    }
+    
+    
+    
+    .btn-area {
+        margin-top: 30px;
+    }
+    .btn-area button {
+        width: 100%;
+        height: 30px;
+        background-color: #787eeb;
+        color: #fff;
+        border: none;
+        font-size: 15px;
+        border-radius: 25px;
+    }
+    
+    
+    
+    /*      로그인 후 정보표시        */
+    
+    #infor{
+        border: 1px solid;
+        border-color: #ffffff;
+        border-radius: 15px;
+        color: #ffffff;
+        text-align: left;
+        font-size: 15px;
+        width: 50%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    #greeting4{
+        margin-top: 15px;
+    }
+    
+    #remove_storage{
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        border-radius: 50px;
+        border-color: rgb(152, 152, 152);
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 30px;
+    
+    }
 }
-
-.btn-area{
-    margin: 15px 0;
-    width: 100%;
-    height: 100%;
-}
-
-.btn-area input{
-    width: 100%;
-    height: 10%;
-}
-
-
-#infor{
-    display: block;
-    width: 100%;
-    margin-top: 0;
-    font-size: 10px;
-    padding: 0;
-    text-align:center
-}
-
-#infor h2{
-    margin: 10px;
-}
-
-#remove_storage{
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 50px;
-    border-color: rgb(152, 152, 152);
-    width: 60%;
-    height: 30px;
-    font-size: 13px;
-    text-align: center;
-    margin: 0;
-
-}
-
-            
-
-}
-          
-
