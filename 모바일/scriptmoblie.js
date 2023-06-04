@@ -1,8 +1,3 @@
-
-
-
-
-
 ///로그인 정보 저장 변수
 const loginForm = document.querySelector("#login");
 
@@ -27,26 +22,6 @@ const savedSeat_number = localStorage.getItem("seat_number")
 const removeBtn = document.querySelector("#remove_storage");
 
 
-/// 모바일로 보기
-const moblie = document.querySelector("#moblie")
-const container = document.querySelector("#container")
-
-function checkScreenSize() {
-
-  // 현재 화면의 너비
-  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-  if (screenWidth < 1440) {
-    moblie.classList.remove("hidden")
-  }else{
-    moblie.classList.add("hidden")
-  }
-}
-
-// 함수를 호출하여 실행합니다.
-checkScreenSize();
-
-window.addEventListener('resize', checkScreenSize); /// 화면넓이가 바뀔때마다 실행
 
 
 
@@ -145,7 +120,6 @@ window.location.reload();
 }
 
 removeBtn.addEventListener("click", removeStorage);
-
 
 
 
