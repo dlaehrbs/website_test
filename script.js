@@ -79,9 +79,6 @@ function onLoginSubmit(event) {
   const student_number = loginInput2.value;  ///학번
   const seat_number = loginInput3.value; ///자리번호
 
-  const SEAT_NUMBER = seat_number.toUpperCase(); /// 자리번호 입력값을 대문자로 바꾸기
-  seatInformtion(SEAT_NUMBER)   ///대문자로 바뀐 값으로 seatInformtion함수 실행
-
 
 
   localStorage.setItem("username", username);  ///이름저장
@@ -96,6 +93,9 @@ function onLoginSubmit(event) {
   information.classList.remove("hidden") ///학번 이름 자리번호 보이게하기
   greeting4.innerText = "반드시 캡쳐해주세요"
 
+  const SEAT_NUMBER = seat_number.toUpperCase(); /// 자리번호 입력값을 대문자로 바꾸기
+  seatInformtion(SEAT_NUMBER)   ///대문자로 바뀐 값으로 seatInformtion함수 실행
+
   
 
 }
@@ -103,10 +103,20 @@ function onLoginSubmit(event) {
 
 /// 자리 색깔 바꾸기 함수
 function seatInformtion(SEAT_NUMBER){
+  
+  const seatInformtion = document.getElementById(SEAT_NUMBER)
 
-    const seatInformtion = document.getElementById(SEAT_NUMBER)
+  if (seatInformtion.classList.contains("occupiedSeat")) {
+    alert("예약된 자리입니다");
+    localStorage.removeItem("username");
+    localStorage.removeItem("student_number");
+    localStorage.removeItem("seat_number");
+    window.location.reload();
+  } else{
     seatInformtion.classList.remove("seat")
     seatInformtion.classList.add("selectedSeat")
+  }
+
 }
 
 

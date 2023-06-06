@@ -28,7 +28,7 @@ body {
     border-color: #ffffff;
     border-radius: 25px;
     margin: 20px;
-    padding: 30px;
+    padding: 10px;
 }
 
 
@@ -48,6 +48,12 @@ body {
 .text0{
     position: relative; top: 15%;
 }
+#기둥{
+    background-color: #ffffff00;
+    border-radius: 0px;
+    font-size: 10px;
+}
+
 
 
 
@@ -85,19 +91,19 @@ body {
     color: #ffffff;
     border: 1px solid;
     border-color: #a4a4a49f;
-    width: 25px;
+    width: 40px;
     height: 40px;
     margin: 3px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     text-align: center;
-    font-size: 11px;
+    font-size: 6px;
 
     position: relative; 
     top: 0px; 
     left: 0px;
 }
-.seat:nth-of-type(5){
+.seat:nth-of-type(6){
     margin-right: 20px;
 }
 
@@ -131,7 +137,7 @@ body {
     background-color:#000000;
     width: 150px;
     height: 180px;
-    margin-left: 5%;
+    margin-left: 7%;
     border-radius: 15px;
     border: 1px solid;
     border-color: rgb(255, 255, 255);
@@ -143,13 +149,13 @@ body {
 
 .selectedSeat{
     background-color: #01eaff;
-    width: 25px;
+    width: 40px;
     height: 40px;
     margin: 3px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     text-align: center;
-    font-size: 11px;
+    font-size: 6px;
 
     position: relative; 
     top: 0px; 
@@ -162,13 +168,14 @@ body {
 
 
 .occupiedSeat{
-    background-color: #fff;
-    text-align: center;
-    width: 35px;
+    background-color: #3838388b;
+    width: 40px;
     height: 40px;
-    margin: 4px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin: 3px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+    font-size: 6px;
 }
 
 
@@ -285,6 +292,7 @@ body {
 }
 #greeting4{
     margin-top: 15px;
+    color: #0fc8c8;
 }
 
 #remove_storage{
@@ -299,4 +307,17 @@ body {
     text-align: center;
     margin-top: 30px;
 
+}
+
+
+#moblie{
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    color: rgb(64, 64, 64);
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
 }
