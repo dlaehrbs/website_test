@@ -25,7 +25,7 @@ const savedUsername = localStorage.getItem("username")
 const savedStudent_number = localStorage.getItem("student_number")
 const savedSeat_number = localStorage.getItem("seat_number")
 const removeBtn = document.querySelector("#remove_storage");
-
+const savedOccupiedSeat = localStorage.getItem("occupiedSeat")
 
 /// 모바일로 보기
 const moblie = document.querySelector("#moblie")
@@ -55,16 +55,19 @@ if (savedUsername === null){ ////저장된 정보가 없으면
     information.classList.add("hidden")
     loginForm.classList.remove("hidden"); ///hidden 클래스를 제거
     loginForm.addEventListener("submit", onLoginSubmit); ///submit 이벤트가 발생하면 on함수 실행
+    seatInformtion(savedOccupiedSeat)
     
 } else {
   paintGreetings1(savedUsername)
   paintGreetings2(savedStudent_number) ///아니면 저장된 이름으로 pain~~함수 실행
   paintGreetings3(savedSeat_number)
+  seatInformtion(savedOccupiedSeat)
 
   loginForm.classList.add("hidden");
   removeBtn.classList.remove("hidden")  /// 정보제거버튼의 hidden 클래스를 제거
   information.classList.remove("hidden")  /// 로그인폼의 hidden 클래스를 제거
   greeting4.innerText = "반드시 캡쳐해주세요"
+
 }
 
 
@@ -114,7 +117,8 @@ function seatInformtion(SEAT_NUMBER){
     window.location.reload();
   } else{
     seatInformtion.classList.remove("seat")
-    seatInformtion.classList.add("selectedSeat")
+    seatInformtion.classList.add("occupiedSeat")
+    localStorage.setItem("occupiedSeat", SEAT_NUMBER)
   }
 
 }
